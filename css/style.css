@@ -1,0 +1,501 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,700;1,300&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    
+}
+
+.background{
+    
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(48 17 7 / 55%),rgba(48 17 7 / 30%)),url(../img/background.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+}
+nav{
+    display: flex;
+    padding: 1% 4%;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+nav a img{
+    width: 86px;  
+}
+
+.navbar{
+    flex: 1;
+    text-align: right;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+
+}
+
+.navbar ul li::after{
+    content: '';
+    width:0%;
+    height:2px;
+    background-color: black;
+    transition: 0.5s;
+    display: block;
+    margin:auto;
+    
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+
+.navbar ul li a{
+    text-decoration:  none;
+    color: #660d0d;
+    
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+        
+}
+
+.navbar ul li a:hover{
+    color: antiquewhite;
+    transition: all 0.5s ease;
+}
+
+.center-text{
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.center-text h1{
+    font-size: 34px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+   
+        
+}
+.center-text p{
+    font-size: 16px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    margin: 20px 0px;
+}
+
+.center-text a {
+    font-family: 'Ubuntu', sans-serif;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+}
+.center-text a::after{
+    content: '';
+    width: 0px;
+    height: 3px;
+    background: white;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.center-text a:hover::after{
+    width: 12%;
+    
+}
+nav .fa{
+    display: none;
+}
+
+@media(max-width: 715px){
+    
+    .center-text h1{
+    font-size: 20px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    }
+    .center-text p{
+    font-size: 12px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    margin: 15px 0px;
+}
+    
+    nav a img{
+    width: 50px;
+      
+}
+    .navbar ul li{
+        display: block;    
+    }
+    
+    .navbar{
+        position: absolute;
+        background: #fff;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;  
+        transition: 1s;
+    }
+    nav .fa-times{
+        display: block;
+        color: red;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    nav .fa-bars{
+        display: block;
+        color: white;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+}
+
+/*--------courses---------*/
+    
+.courses{
+    width:80%;
+    text-align: center;
+    margin: auto;
+    padding-top: 6%;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+}
+.courses h2{
+    font-size: 34px;
+}
+.courses p{
+    padding-top: 1%;
+    color: #777;
+    font-weight: 400;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 3%;
+}
+.ourcourses{
+    flex-basis: 30%;
+    padding: 4%;
+    border-radius: 6px;
+    transition: 0.5s;
+    cursor: pointer;
+    background-color: #e7d5bc;
+}
+.ourcourses:hover{
+    box-shadow: 0 0 20px 0px;
+}
+
+.ourcourses p{
+    font-size: 14px;
+    padding-top: 15px;
+    color: #777;
+    font-weight: 400;
+}
+@media(max-width: 715px){
+    .row{
+        flex-direction: column;
+
+    }
+    .courses h2{
+    font-size: 25px;
+}
+    .courses p{
+        font-size: 14px;
+    }
+
+.ourcourses{
+    margin-top: 4%;
+    
+}
+
+}
+
+/*-----------Our campus---------*/
+
+.Our-campus{
+    width:80%;
+    margin: auto;
+    padding-top: 6%;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    
+}
+.Our-campus h2{
+    font-size: 34px;
+    
+}
+.Our-campus p{
+    padding-top: 1%;
+    color: #777;
+    font-weight: 400;
+}
+.place{
+    display: flex;
+    justify-content: center;
+    padding: 3%;
+    
+}
+
+.campus-place{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    margin-right: 2%;
+    
+
+    
+}
+.campus-place img{
+    border-radius: 3px;
+    width: 100%;
+
+}
+
+.place-name{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.place-name:hover{
+    background: rgba(226,0,0,0.7);
+}
+.place-name h3{
+    width: 100%;
+    font-weight: 500;
+    color: white;
+    font-size: 20px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;    
+}
+
+.place-name:hover h3{
+    opacity: 1;
+    bottom: 49%;
+}
+
+@media(max-width: 715px){
+    .place{
+        flex-direction: column;
+    }
+    .campus-place{
+        margin-right: 0;
+    }
+    .Our-campus h2{
+    font-size: 25px;
+    
+}
+    .Our-campus p{
+        font-size: 14px;
+        
+    }
+}
+
+/*----------facilities---------*/
+
+.facilities{
+    width:80%;
+    margin: auto;
+    padding-top: 4%;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    
+}
+.facilities h2{
+    font-size: 34px;
+    
+}
+.facilities p{
+    padding-top: 1%;
+    color: #777;
+    font-weight: 400;
+}
+
+.facility{
+    display: flex;
+    justify-content: center;
+    padding-top: 3%;    
+}
+.facility-row{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    margin-right: 2%;
+}
+.facility-row img{
+   width: 100%;
+   border-radius: 10px;
+}
+.FH{
+    text-align: left;
+    line-height: 20px;
+    padding-top: 2%;
+    
+}
+.FH h3{
+    font-weight: 500;
+}
+
+.FH p{
+    font-size: 15px;
+}
+
+@media(max-width: 715px){
+    .facility{
+        flex-direction: column;
+        padding-top: 7%; 
+    }
+    .facility-row{
+        margin-right: 0;
+        
+    }
+    .facilities  h2{
+    font-size: 25px;
+    
+}
+    .facilities  p{
+        font-size: 14px;
+        
+    }
+    .FH h3{
+        font-size: 17px;
+    font-weight: 400;
+}
+    .FH p{
+    font-size: 11px;
+}
+}
+
+/*----------Review-----------*/
+.review{
+    width: 80%;
+    margin:auto;
+    padding-top: 5%;
+    text-align: center; 
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+}
+.review h2{
+    font-size: 34px;
+}
+.rvw{
+    display: flex;
+    justify-content: center;
+    padding: 4%;
+}
+.review-row{
+    display: flex;
+    background-color: #e7d5bc;
+    margin-right: 2%;
+    border-radius: 10px;
+    flex-direction: column;
+    padding: 3%;
+}
+.review-row img{
+    width: 150px;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+}
+.review-para{
+    font-size: 12px;
+    padding-top: 2%;
+    padding-bottom: 4%;
+    width: 80%;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+} 
+.review-row:hover{
+    box-shadow: 0 0 20px 0;
+    transition: 0.5s;
+}
+.review-para .fa{
+    text-align: left;
+    padding-top: 3%;
+}
+.star{
+    display: flex;
+    padding-top: 3%;
+}
+
+@media(max-width: 715px){
+    .rvw{
+        flex-direction: column;
+        margin-right: 0;
+    }
+    .review-row{
+        margin-top: 4%;
+        
+    }
+    .review h2{
+    font-size: 25px;
+}
+    .review-para{
+        font-size: 10px;
+    }
+    .review-row img{
+        width: 100px;
+    }
+}
+
+/*--------footer--------*/
+
+.footer{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 4%;
+}
+.footer h3{
+    font-size: 20px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    padding-bottom: 1%;
+}
+.footer p{
+    font-size:13px;
+    color: #777;
+     font-family: 'Ubuntu', sans-serif;
+    
+}
+.social .fa{
+    font-size:18px;
+    margin: 1%;
+    padding-top: 1%;
+    cursor: pointer;
+    
+}
+.social .fa:hover{
+    color: red;
+    transition: 0.3s;
+}
+.fa-heart-o{
+    color: red;
+}
